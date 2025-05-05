@@ -1,48 +1,63 @@
-# Astro Starter Kit: Basics
+# A3-Teste
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este projeto foi criado com [TinaCMS](https://tina.io) integrado ao [Astro](https://astro.build), permitindo edição de conteúdo visual diretamente no navegador.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Tecnologias Utilizadas
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Astro](https://astro.build)
+- [TinaCMS](https://tina.io)
+- [React](https://reactjs.org)
+- [TypeScript (opcional)]
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 📦 Instalação
 
-## 🚀 Project Structure
+1. Clone este repositório:
 
-Inside of your Astro project, you'll see the following folders and files:
+   ```bash
+   git clone https://github.com/Roow14/a3-teste.git
+   cd a3-teste
+Instale as dependências:
 
-```text
-/
-├── public/
-│   └── favicon.svg
+bash
+
+npm install
+🧪 Ambiente de Desenvolvimento
+Para iniciar o servidor de desenvolvimento com TinaCMS:
+
+bash
+
+npm run dev
+Isso irá rodar o site localmente em http://localhost:4321 e a interface de CMS estará disponível em http://localhost:4321/admin.
+
+📝 Estrutura de Pastas
+csharp
+
+a3-teste/
+├── .tina/               # Configuração do TinaCMS
+├── content/             # Arquivos de conteúdo (ex: markdown)
+├── public/              # Arquivos estáticos
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+│   ├── components/      # Componentes React/Astro
+│   ├── layouts/         # Layouts do site
+│   └── pages/           # Páginas do site
+├── package.json         # Configuração do projeto
+└── README.md            # Este arquivo
+📂 Acesso ao CMS
+Você pode acessar o CMS em:
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+bash
 
-## 🧞 Commands
+http://localhost:4321/admin
+Certifique-se de que você está editando conteúdos válidos no diretório content/.
 
-All commands are run from the root of the project, from a terminal:
+🛠️ Scripts Disponíveis
+npm run dev — Inicia o servidor de desenvolvimento com TinaCMS.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+npm run build — Gera a build de produção.
 
-## 👀 Want to learn more?
+npm run preview — Visualiza a build de produção localmente.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+🧠 Dicas
+Se o CMS não aparecer em /admin, verifique se o arquivo admin.astro está dentro de src/pages/.
+
+Para evitar erros com módulos do Node no Astro, use import ao invés de require.
