@@ -1,0 +1,346 @@
+--- 
+import Layout from '../../components/Layout.astro';
+import { faker } from '@faker-js/faker';
+
+export async function getStaticPaths() {
+  return Array.from({ length: 1000 }, (_, i) => ({
+    params: { slug: String(i + 1) },
+  }));
+}
+
+const { slug } = Astro.params;
+const title = `Página Template 2 - Página número ${slug}`;
+const content = faker.lorem.paragraphs(3);
+---
+
+<Layout>
+  <main class="flex-1 flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="max-w-3xl mx-auto px-6 py-8 text-center bg-white shadow-lg rounded-lg">
+     
+  
+      <!-- TÍTULO -->
+      <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
+        This "Diabetic Parasite" is causing deadly glucose spikes in millions of Americans! (See the #1 way to fight it now)
+      </h1>
+  
+      <!-- VÍDEO NO LUGAR DA IMAGEM -->
+      <div class="relative aspect-video mb-6">
+        <iframe width="50%" height="515"
+        src="https://www.youtube.com/embed/agWBxUxQfXk"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+    
+      </div>
+  
+      
+  
+      <!-- PARÁGRAFO -->
+      <div class="text-left mb-8">
+        <p class="mb-6">
+          Scientific References:
+        </p>
+  
+        <!-- IMAGEM -->
+        <img src="/refs.webp" alt="Healthy lifestyle" class="w-full rounded-md mb-6" />
+  
+        <!-- LISTA -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left text-gray-700 mt-8">
+          <!-- Primeira coluna -->
+          <ul class="vitamin-list">
+            <li>Vitamin D and type 2 diabetes</li>
+            <li>Vitamin D and Diabetic Kidney Disease</li>
+            <li>Vitamins and type 2 diabetes mellitus</li>
+            <li>Appropriate and inappropriate vitamin supplementation in children</li>
+            <li>Beneficial role of vitamin K supplementation on insulin sensitivity, glucose metabolism, and the reduced risk of type 2 diabetes: A review</li>
+            <li>Meta-analysis: Vitamin D Therapy Reduced Type 2 Diabetes</li>
+            <li>Citicoline and Vitamin B12 Eye Drops in Type 1 Diabetes: Results of a 36-Month Pilot Study Evaluating Macular Electrophysiological Changes</li>
+            <li>Vitamin C supplementation for diabetes management: A comprehensive narrative review</li>
+            <li>Role of Vitamin C in Enhancing Fat Reduction and Metabolic Health: Insights from Overweight Adults.</li>
+            <li>Vitamin C and the management of diabetic foot ulcers: a literature review</li>
+            <li>Summary for Patients: Vitamin D and Risk for Type 2 Diabetes in People With Prediabetes.</li>
+            <li>Acceptability, Safety, and Efficacy of Oral Administration of Extracts of Black or Red Maca (Lepidium Meyenii) in Adult Human Subjects: A Randomized, Double-blind, Placebo-controlled Study.</li>
+            <li>Preventing Type 2 Diabetes With Vitamin D: Therapy Versus Supplementation</li>
+            <li>Vitamin D and Beta Cells in Type 1 Diabetes: A Systematic Review</li>
+    <li>Vitamin D and new insights into pathophysiology of type 2 diabetes</li>
+    <li>Vitamin D and risk of type 2 diabetes</li>
+    <li>Vitamin D and diabetes mellitus: an update 2013</li>
+    <li>The Management of Diabetes Mellitus Using Medicinal Plants and Vitamins</li>
+    <li>Oxidative stress, type 2 diabetes and vitamin D: past, present and future</li>
+    <li>Water Soluble Vitamins and their Role in Diabetes and its Complications</li>
+    <li>Vitamin D and adrenal gland: Myth or reality? A systematic review</li>
+    <li>Effects of B Vitamins on Metabolism and Weight Management in Overweight Individuals: A Meta-analysis Review.</li>
+    <li>Pharmacokinetics and the Effect of Capsaicin in Capsicum Frutescens on Decreasing Plasma Glucose and Promoting Weight Loss.</li>
+    <li>Effect of 2-Month Controlled Green Tea Intervention on Lipoprotein Cholesterol, Glucose, and Hormone Levels in Overweight Postmenopausal Women.</li>
+    <li>Vitamin D and diabetes</li>
+    <li>Vitamin D effects and endocrine diseases</li>
+          </ul>
+          
+        </div>
+        
+
+      </div>
+  
+     
+    </div>
+  
+    <!-- Rodapé de disclaimer mantido -->
+    <footer class="foot-sec mt-12 border-t border-gray-200 py-8 bg-gray-50 text-center text-gray-700 text-sm">
+      <ul class="foot-list flex flex-wrap justify-center gap-2 mb-4">
+        <li><a href="#">Privacy</a> |</li>
+        <li><a href="#">Terms and Conditions</a> |</li>
+        <li><a href="#">Disclaimer</a> |</li>
+        <li><a href="#">References</a> |</li>
+        <li><a href="#">Returns</a> |</li>
+        <li><a href="#">Refunds</a> |</li>
+        <li><a href="#">Contact</a> |</li>
+        <li><a href="#">Shipping Policy</a></li>
+      </ul>
+    
+      <p class="mb-4"><span id="copy-writer">All rights reserved.</span></p>
+    
+      <div class="foot-wrapper max-w-4xl mx-auto px-4 text-left space-y-3">
+        <p>
+          These statements have not been evaluated by the Food and Drug Administration.
+          This product is not intended to diagnose, treat, cure or prevent any disease. </p>
+      </div>
+      <div class="foot-wrapper2" >
+      <p>The content of this site is for informational purposes only, and is not intended to replace professional medical advice, diagnosis or treatment.
+        Always seek the advice of your doctor or other qualified health care professional about a medical condition,
+         a suspected medical condition, and before starting a diet, exercise, or supplementation program or take or stop a medication.</p>
+      </div>
+    </footer>
+    
+
+  
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+      [...document.getElementsByTagName("a")]
+        .filter((link) => link.href.indexOf("#") === -1)
+        .forEach((link) => {
+          link.href +=
+            link.href.indexOf("?") !== -1
+              ? location.search.replace("?", "&")
+              : location.search;
+        });
+    });
+  </script>
+
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6; /* bg-gray-100 */
+  }
+
+  .text-center {
+    text-align: center;
+    padding: 30px;
+  }
+
+  .text-4xl {
+    font-size: 28px;
+    width: 55%;
+    margin: 0 auto 2rem auto;
+    font-weight: bold;
+    color: #1f2937; /* text-gray-900 */
+  }
+
+  .w-full {
+    width: 106%;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+    
+  }
+
+  .text-left p {
+    text-align: justify;
+    width: 40%;
+    margin: 50px auto 1.5rem auto;
+    font-size: 17px;
+    line-height: 1.6;
+    position: relative;
+    left: 15%;
+    color: #a3a39f;
+  }
+  .text-left img {
+    width: 60%;
+    height: 50%;
+  }
+  .vitamin-list {
+  columns: 2;
+  column-gap: 2rem;
+  list-style-position: inside;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0;
+  text-align:justify;
+  font-size: 11px;
+  color: #a3a39f;
+}
+
+.vitamin-list li {
+  break-inside: avoid;
+  margin-bottom: 0.5rem;
+}
+
+
+  .bg-green-600 {
+    background-color: #16a34a;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    margin: 30px auto 23px auto;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .hover\:bg-green-700:hover {
+    background-color: #15803d;
+  }
+
+  .shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .rounded-lg {
+    border-radius: 1rem;
+  }
+/* Escopo específico apenas para o disclaimer/footer */
+footer.foot-sec {
+  background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0 30px;
+}
+
+.foot-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  gap: 8px;
+}
+
+.foot-list li {
+  display: inline;
+}
+
+.foot-list a {
+  color: #fff !important;
+    padding: 0px 5px;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.foot-list a:hover {
+  color: #007bff;
+}
+
+.foot-wrapper {
+  margin: 0 22%;
+    
+}
+.foot-wrapper p {
+  font-size: 0.770rem;       /* Tamanho igual para todos os parágrafos */
+  line-height: 1.6;          /* Altura da linha confortável e uniforme */
+  color: #fff;               /* Cor suave para leitura */
+  margin-bottom: 1rem;       /* Espaço entre os parágrafos */
+  text-align: left;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  text-align:justify;
+}
+.foot-wrapper2 p {
+  font-size: 0.770rem;       /* Tamanho igual para todos os parágrafos */
+  line-height: 1.6;          /* Altura da linha confortável e uniforme */
+  color: #fff;               /* Cor suave para leitura */
+  margin-bottom: 1rem;       /* Espaço entre os parágrafos */
+  text-align: justify;
+  width: 54%;
+  position: relative;
+  left: 23%;
+ 
+  
+}
+/* Ajustes responsivos para telas menores */
+@media (max-width: 768px) {
+  .text-center {
+    padding: 20px 10px;
+  }
+
+  .text-4xl {
+    font-size: 20px;
+    width: 90%;
+  }
+
+  .w-full {
+    width: 90%;
+    height: auto;
+  }
+
+  .text-left p {
+    width: 90%;
+    font-size: 15px;
+    left: 0;
+  }
+
+  .text-left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .vitamin-list {
+    columns: 1;
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  .bg-green-600 {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  footer.foot-sec {
+    padding: 20px 10px;
+  }
+
+  .foot-list {
+    gap: 5px;
+  }
+
+  .foot-list a {
+    font-size: 13px;
+  }
+
+  .foot-wrapper,
+  .foot-wrapper2 {
+    width: 95%;
+    left: 0;
+  }
+
+  .foot-wrapper p,
+  .foot-wrapper2 p {
+    font-size: 13px;
+    width: 100%;
+    left: 0;
+  }
+}
+
+
+
+</style>
+
+</Layout>

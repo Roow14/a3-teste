@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Links das Páginas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+	/* Resetando algumas propriedades do browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 20px;
+  position: relative;
+  top: 50px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin: 15px 0;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  background-color: #3498db;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-link:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+
+.button-link:active {
+  background-color: #1d6fa5;
+  transform: translateY(1px);
+}
+
+  </style>
+  <body>
+    <div class="container">
+      <h1>Página Inicial</h1>
+      <p>Links para direcionar ao A3 - teste</p>
+      <ul>
+        <li><a href="/paginatemplate1/1" class="button-link">Página Template 1 - 1</a></li>
+        <li><a href="/paginatemplate2/1" class="button-link">Página Template 2 - 1</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
